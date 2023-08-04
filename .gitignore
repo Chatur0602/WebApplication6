@@ -364,3 +364,4 @@ FodyWeavers.xsd
 /WebApplication6/Videos
 /WebApplication6/App_Data/myDB_log.ldf
 /WebApplication6/obj/Release/.NETFramework,Version=v4.7.2.AssemblyAttributes.cs
+/WebApplication6/Properties/PublishProfiles/FYPAppModernization - Web Deploy.pubxml
