@@ -1,0 +1,58 @@
+﻿.footerlinks {
+    color: #ffffff;
+    text-decoration: none !important;
+    top:100px;
+    bottom:100px;
+}
+
+    .footerlinks:hover {
+        color: #ffd800;
+    }
+
+#footer1 {
+    background: #762b00;
+}
+
+#footer2 {
+    background: #531f00;
+}
+
+.mySlides{
+    max-height: 750px;
+}
+
+.popularRecipes {
+    font-family: serif;
+    padding-top: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.naviBar {
+    background-image: linear-gradient(to right, orange, lightblue);
+    margin-bottom: 5px;
+}
+
+.title {
+    font-family: serif;
+    font-size: 70px;
+    font-weight: 600;
+    background-image: linear-gradient(#003698,green);
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    text-align:center;
+   
+}
+
+.description {
+    padding-top: 25px;
+    padding-left: 500px;
+    padding-right: 500px;
+    font-family: SourceSansPro,Helvetica,sans-serif;
+    font-size: 28px;
+    text-align: center;
+}
+

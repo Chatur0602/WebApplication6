@@ -1,0 +1,211 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" Inherits="WebApplication2.mySite" CodeFile="mySite.master.cs" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title>Kozy Kitchen</title>
+ 
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link href="Content/masterStyle.css" rel="stylesheet" />
+    
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    
+</head>
+<body>
+    <style>
+        .dropdown {
+    position: relative;
+    display: inline-block;
+    
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    min-width: 450px;
+    text-align:left;
+    padding: 2px 16px;
+    
+    z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+    
+}
+</style>
+
+
+    <form id="form1" runat="server">
+        
+        <div class = "naviBar">
+            <nav class="navbar navbar-expand-lg navbar-light">
+               <img src="../ProfilePic/logo.png" width="50" height="50" /> &nbsp
+                <a class="navbar-brand" href="#">
+                    KozyKitchen
+                </a>
+
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="home.aspx">Home</a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="recipePage.aspx">Recipes</a>
+                        </li> 
+                        <li class="nav-item active">
+                            <asp:LinkButton ID="quizLabel"  runat="server"><a class="nav-link" href="quizPage.aspx">Quizzes</a></asp:LinkButton>
+                        </li>
+                        <li class="nav-item active">
+                            <asp:LinkButton ID="courseLabel"  runat="server"><a class="nav-link" href="coursePage.aspx">Courses</a></asp:LinkButton>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="About.aspx">About Us</a>
+                        </li>
+                    </ul>
+
+                    <ul class="navbar-nav">
+ 
+                        <li class="nav-item active">
+                            <div class="dropdown">
+                                  <span><asp:LinkButton href="login.aspx" class="nav-link" ID="username" runat="server">Login</asp:LinkButton></span>
+                                  <div class="dropdown-content">
+                                    <asp:LinkButton class="nav-link" ID="editLink" href="editProfile.aspx" runat="server">Manage Account <br /> </asp:LinkButton>
+                                    <asp:LinkButton class="nav-link" ID="manageMemberLink" href="manageMember.aspx" runat="server">Manage Members</asp:LinkButton>
+                                      <asp:LinkButton class="nav-link"  ID="manageCoursesLink" href="manageCourses.aspx" runat="server">Manage Courses</asp:LinkButton>
+                                      <asp:LinkButton class="nav-link" OnClick="logoutLink_Click" ID="logoutLink" runat="server">Logout</asp:LinkButton>
+                                     
+                                      
+
+                                  </div>
+                                </div>
+                        </li>
+
+
+                    </ul>                
+
+                 </div>
+        </nav>
+        </div>
+
+        <div class ="title">
+            <asp:ContentPlaceHolder ID="TitleHolder" runat="server">
+
+            </asp:ContentPlaceHolder>
+        </div>
+
+        <div class ="description">
+            <asp:ContentPlaceHolder ID="descriptionHolder" runat="server">
+
+            </asp:ContentPlaceHolder>
+        </div>
+
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
+
+        </asp:ContentPlaceHolder>
+
+
+        <!-- Main Content Placeholder -->
+        <div class ="placementHolder">
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+
+            </asp:ContentPlaceHolder>
+        </div>
+        <!-- Main Content Placeholder -->
+
+        <div class ="popularRecipes">
+            <asp:ContentPlaceHolder ID="recipeHolder" runat="server">
+
+            </asp:ContentPlaceHolder>
+        </div>
+
+        <!-- Main Content Placeholder -->
+
+        
+            <asp:ContentPlaceHolder ID="newsPlacementHolder" runat="server"> 
+                
+            </asp:ContentPlaceHolder>
+
+        <asp:ContentPlaceHolder ID="tracksPlacementHolder" runat="server"> 
+                
+            </asp:ContentPlaceHolder>
+        
+            <asp:ContentPlaceHolder ID="cardHolder" runat="server"> 
+
+            </asp:ContentPlaceHolder>
+
+        <!-- Main Content Placeholder -->
+             <div class="videoPlaceholder" style="margin-left:530px;">
+                    <asp:ContentPlaceHolder ID="videoHolder" runat="server"> 
+
+                    </asp:ContentPlaceHolder>
+
+                </div>
+
+            <!-- Main Content Placeholder -->
+             <div class="summary">
+                    <asp:ContentPlaceHolder ID="summaryHolder" runat="server"> 
+
+                    </asp:ContentPlaceHolder>
+
+                </div>
+
+                <asp:ContentPlaceHolder ID="ingridientHolder" runat="server"> 
+
+                </asp:ContentPlaceHolder>
+
+                <asp:ContentPlaceHolder ID="nutritionHolder" runat="server"> 
+
+                </asp:ContentPlaceHolder>
+
+                    
+       
+       
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
+         <!-- Footer -->
+        <footer>
+            <div id="footer1" class="container-fluid">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-12 text-center">
+                        <p>
+                            <asp:LinkButton href="adminRegistration.aspx" class="footerlinks" ID="LinkButton6" runat="server">Admin</asp:LinkButton>
+                            &nbsp;&nbsp;
+                           <asp:LinkButton class="footerlinks" ID="LinkButton4" runat="server">Terms</asp:LinkButton>
+                            &nbsp;&nbsp;
+                           <asp:LinkButton class="footerlinks" ID="LinkButton5" runat="server">Privacy policy</asp:LinkButton>
+                        </p>
+
+                    </div>
+
+                </div>
+            </div>
+            <div id="footer2" class="container-fluid">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-12 text-center">
+                        <p style="color:whitesmoke">&copy All Rights Reserved. <a class="footerlinks" href="#" target="_blank">Kozy Kitchen</a></p>
+                    </div>
+                </div>
+            </div>
+
+        </footer>
+        <!-- ./Footer -->
+
+    </form>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    
+
+</body>
+</html>
